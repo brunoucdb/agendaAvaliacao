@@ -1,0 +1,12 @@
+body{
+    margin:0%;
+    padding: 0;
+}
+.nav-bar{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(85, 162, 233, 0.404);
+}
+.nav-bar img{
+    width: 10vw;    
+}
