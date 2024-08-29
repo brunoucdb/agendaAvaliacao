@@ -6,7 +6,30 @@
     <title>Agenda de Avaliação</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="light-mode"> <!-- Definindo o tema claro por padrão -->
+    <nav class="nav-bar">
+        <img src="images/logo.png" alt="Logo">
+        <button class="toggle-theme-btn" onclick="toggleTheme()">Modo Escuro</button>
+    </nav>
     
+    <div class="titulo">
+        <h1 class="h1-topo">Calendário de Avaliações</h1>
+    </div>
+    <div class="container-turma">
+        <div id="materias-container">
+            <!-- Matérias serão adicionadas aqui dinamicamente -->
+        </div>
+        <button id="add-materia-btn" class="toggle-form-btn">Adicionar Matéria</button>
+    </div>
+
+    <!-- Formulário para criar uma nova matéria -->
+    <div id="new-materia-form-container" class="form-container">
+        <form id="new-materia-form">
+            <label for="materia-nome">Nome da Matéria:</label>
+            <input type="text" id="materia-nome" name="materia-nome" placeholder="Nome da matéria">
+
+            <button type="submit">Adicionar Matéria</button>
+        </form>
+    </div>
 </body>
 </html>
