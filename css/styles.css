@@ -1,0 +1,170 @@
+/* Manter o body sem margens e centralizar conteúdo */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modo Claro */
+body.light-mode {
+    --container-bg-color: #ffffff;
+    --border-color: #dddddd;
+    --calendario-bg-color: #f0f0f0;
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+    --container-bg-color: #1e1e1e;
+    --border-color: #444444;
+    --calendario-bg-color: #333333;
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* Estilos da nav-bar */
+.nav-bar {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+/* Estilo do botão de alternância de tema */
+.toggle-theme-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+
+.toggle-theme-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Outros estilos */
+.titulo {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.container-turma {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: var(--container-bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.materia-container {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--container-bg-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.materia-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avaliacoes {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendario-dia {
+    background-color: var(--calendario-bg-color);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 200px;
+}
+
+.form-container {
+    display: none;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+   margin: 6px;   
+}
+
+input[type="text"], input[type="date"], textarea {
+    margin: 10px 0;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 1920px) {
+    .nav-bar img {
+        width: 9vw;
+    }
+}
+
+@media (max-width: 1600px) {
+    .nav-bar img {
+        width: 12vw;
+    }
+}
+
+@media (max-width: 720px) {
+    .nav-bar img {
+        width: 22vw;
+    }
+}
+
+@media (max-width: 628px) {
+    .nav-bar img {
+        width: 20vw;
+    }
+}
